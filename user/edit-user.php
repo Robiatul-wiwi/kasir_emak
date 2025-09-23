@@ -51,7 +51,7 @@ if (isset($_POST['koreksi'])) {
       <div class="card">         
         <form action="" method="post" enctype="multipart/form-data">
           <div class="card-header">           
-            <h3 class="card-title"><i class="fas fa-plus fa-sm"></i> Add User</h3>
+            <h3 class="card-title"><i class="fas fa-pen fa-sm"></i> Edit User</h3>
             <div class="card-tools">
               <button type="submit" name="koreksi" class="btn btn-primary btn-sm">
                 <i class="fas fa-save"></i> Koreksi </button>
