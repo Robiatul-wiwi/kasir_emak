@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+
+if (isset($_SESSION["ssLoginPOS"])) {
+    header("location: ../dashboard");
+    exit();
+}
+
 require "../config/config.php";
 
 if (isset($_POST['login'])) {
@@ -22,6 +29,10 @@ if (isset($_POST['login'])) {
             $_SESSION['login'] = true;
             $_SESSION['username'] = $row['username'];
             $_SESSION['userid'] = $row['userid'];
+
+            // set session
+            $_SESSION["ssLoginPOS"] = true;
+            $_SESSION["ssUserPOS"]  = $username;
 
             header("Location: ../dashboard.php");
             exit();
@@ -57,7 +68,7 @@ if (isset($_POST['login'])) {
 <div class="login-box slide-down" style="margin-top: -70px;">
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="#" class="h1"><b>kasir_emak</b>POS</a>
+            <a href="#" class="h1"><b>kasir_emak</b></a>
         </div>
         <div class="card-body">
             <p class="login-box-msg">Sign in to start your session</p>

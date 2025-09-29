@@ -1,4 +1,10 @@
 <?php
+
+if (userLogin()['level'] != 1) {
+    header("location:" . $main_url . "error-page.php");
+    exit();
+}
+
 // module-user.php
 
 function insert($data) {
@@ -31,7 +37,8 @@ function insert($data) {
         $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
         if (in_array($ext, $allowed)) {
             if ($filesize > 2000000) { // max 2MB
-                echo "<script>alert('Ukuran file terlalu besar! Maksimal 2MB');</script>";
+                echo "<script>alert('Ukuran file terlalu besar! Maksimal 2MB');
+                </script>";
                 return 0;
             }
             // buat nama unik biar ga nabrak
