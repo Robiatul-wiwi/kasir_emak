@@ -77,7 +77,7 @@ foreach ($itemJual as $item) {
       <td class="center"><b>Kasir Emak</b></td>
     </tr>
     <tr>
-      <td class="center">Jl. Contoh No.123, Kota Anda</td>
+      <td class="center">Jl.Jati Tanjakan, Ds.Jatiwaringin, Kec.Mauk</td>
     </tr>
     <tr>
       <td class="center"><?= 'No Nota : ' . htmlspecialchars($nota) ?></td>
