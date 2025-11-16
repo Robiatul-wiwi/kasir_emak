@@ -64,7 +64,7 @@ $penjualan = getData("SELECT * FROM tbl_jual_detail WHERE no_jual = '$id'");
               foreach($penjualan as $jual){ ?>
                 <tr>
                   <td><?= $no++ ?></td>
-                  <td><?= $jual['kode_brg'] ?></td>
+                  <td><?= $jual['barcode'] ?></td>
                   <td><?= $jual['nama_brg'] ?></td>
                   <td class="text-center"><?= number_format($jual['harga_jual'], 0, ",", ".") ?></td>
                   <td class="text-center"><?= $jual['qty'] ?></td>
