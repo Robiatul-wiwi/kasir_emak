@@ -10,10 +10,12 @@ if (!isset($_SESSION["ssLoginPOS"])) {
 require "config/config.php";
 require "config/functions.php";
 
+//Dashboar
 $title = "Dashboard - kasir-emak";
  require "template/header.php";
  require "template/navbar.php";
  require "template/sidebar.php";
+
 
 $users = getData("SELECT * FROM tbl_user");
 $userNum = count($users);
