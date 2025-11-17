@@ -7,6 +7,7 @@ if (!isset($_SESSION["ssLoginPOS"])) {
     exit();
 }
 
+//Jalur
 require "../config/config.php"; 
 require "../config/functions.php"; 
 require "../module/mode-barang.php";  
